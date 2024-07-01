@@ -54,7 +54,7 @@ class ViteAssetVersionStrategy implements VersionStrategyInterface
         return $this->applyVersion($path);
     }
 
-    public function applyVersion(string $path): string
+    public function applyVersion($path): string
     {
         return $this->getAssetPath($path) ?: $path;
     }
