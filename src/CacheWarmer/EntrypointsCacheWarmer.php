@@ -20,7 +20,7 @@ class EntrypointsCacheWarmer extends AbstractPhpFileCacheWarmer
         parent::__construct($phpCacheFile);
     }
 
-    protected function doWarmUp(string $cacheDir, ArrayAdapter $arrayAdapter): bool
+    protected function doWarmUp($cacheDir, ArrayAdapter $arrayAdapter): bool
     {
         $fileAccessor = new FileAccessor($this->publicPath, $this->configs, $arrayAdapter);
 
